@@ -183,11 +183,11 @@ export default function HeroChat() {
           >
             <input
               type="text"
-              placeholder="Ask about Malik's work, stack, projects, favorite food..."
+              placeholder="I am Malik's AI Assistant ...."
               className="pf-chat-input"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              aria-label="Ask about Malik's work"
+              aria-label="I am Malik's AI Assistant"
             />
             <button
               type="submit"
@@ -208,28 +208,6 @@ export default function HeroChat() {
           </form>
         </div>
       </div>
-
-      {/* Suggested Question Chips (Only shown when collapsed) */}
-      {!isExpanded && (
-        <div className="pf-chat-chips">
-          {[
-            '✦ DevOps Experience',
-            '✦ Favorite Food?',
-            '✦ Favorite Sport?',
-            '✦ NovaPay CI/CD',
-            '✦ Tech Stack',
-          ].map((chip) => (
-            <button
-              key={chip}
-              type="button"
-              className="pf-chat-chip mono"
-              onClick={() => handleSend(chip.replace(/^✦\s*/, ''))}
-            >
-              {chip}
-            </button>
-          ))}
-        </div>
-      )}
     </div>
   );
 }
